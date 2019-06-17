@@ -1,0 +1,8 @@
+body {
+    background: url("../images/bananas.png");
+}
+
+h1,
+p {
+    font-family: 'Oswald', sans-serif;
+}
