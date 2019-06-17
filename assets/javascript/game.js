@@ -5,13 +5,13 @@ $(document).ready(function() {
     var score = 0;
     
     //Computer pick random starting number
-    var compPick = Math.floor(Math.random() * 102) + 19;
+    var compPick = Math.floor(Math.random() * 120) + 19;
         $('#randomNumber').html(compPick);
 
     var picOne = Math.floor(Math.random() * 12) + 1;
-    var picTwo = Math.floor(Math.random() * 12) +1;
-    var picThree = Math.floor(Math.random() * 12) +1;
-    var picFour = Math.floor(Math.random() * 12) +1;
+    var picTwo = Math.floor(Math.random() * 12) + 1;
+    var picThree = Math.floor(Math.random() * 12) + 1;
+    var picFour = Math.floor(Math.random() * 12) + 1;
 
     //Reset function
     function reset () {
@@ -20,9 +20,9 @@ $(document).ready(function() {
         score = 0;
             $('#score').html(score);
         picOne = Math.floor(Math.random() * 12) + 1;
-        picTwo = Math.floor(Math.random() * 12) +1;
-        picThree = Math.floor(Math.random() * 12) +1;
-        picFour = Math.floor(Math.random() * 12) +1;
+        picTwo = Math.floor(Math.random() * 12) + 1;
+        picThree = Math.floor(Math.random() * 12) + 1;
+        picFour = Math.floor(Math.random() * 12) + 1;
     };
 
     //Click event for each minion image
