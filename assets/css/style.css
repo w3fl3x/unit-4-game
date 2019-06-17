@@ -6,3 +6,12 @@ h1,
 p {
     font-family: 'Oswald', sans-serif;
 }
+
+.col-md-12,
+.col-md-2,
+.col-md-4 {
+    background-color: white;
+    opacity: 0.6;
+    margin: 2px;
+    border: solid 1px lightgray;
+}
