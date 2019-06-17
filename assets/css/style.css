@@ -22,3 +22,7 @@ p {
     border: solid 1px lightgray;
     height: 75px;
 }
+
+.minionImage {
+    width: 200px;
+}

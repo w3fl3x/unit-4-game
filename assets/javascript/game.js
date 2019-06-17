@@ -8,35 +8,52 @@ $(document).ready(function() {
     var compPick = Math.floor(Math.random() * 102) + 19;
         $('#randomNumber').html(compPick);
 
-    var imgOne = Math.floor(Math.random() * 12) + 1;
-        // $('#one').html('')
-    var imgTwo = Math.floor(Math.random() * 12) +1;
-    var imgThree = Math.floor(Math.random() * 12) +1;
-    var imgFour = Math.floor(Math.random() * 12) +1;
+    var picOne = Math.floor(Math.random() * 12) + 1;
+    var picTwo = Math.floor(Math.random() * 12) +1;
+    var picThree = Math.floor(Math.random() * 12) +1;
+    var picFour = Math.floor(Math.random() * 12) +1;
 
     function reset () {
         compPick = Math.floor(Math.random() * 102) + 19;
             $('#randomNumber').html(compPick);
-
         score = 0;
-            $('#totalScore').html(score);
-
-        imgOne = Math.floor(Math.random() * 12) + 1;
-            $('#one').html
+            $('#score').html(score);
+        picOne = Math.floor(Math.random() * 12) + 1;
+        picTwo = Math.floor(Math.random() * 12) +1;
+        picThree = Math.floor(Math.random() * 12) +1;
+        picFour = Math.floor(Math.random() * 12) +1;
     };
 
-    $('img').on('click', function () {
-        var newScore = score += parseInt($(this).attr('value'));
-            $('#totalScore').html(newScore);
-
-            if(newScore === compPick) {
-                win++;
-                $('#wins').html('Wins: ' + wins);
-                reset();
-            } else if (newScore > compPick) {
-                losses++;
-                $('#losses').html('Losses: ' + losses);
-                reset();
-            }
+    $('#one').on('click', function () {
+        score += picOne;
+        WinLoose();
+        $('#score').text(score);
     });
+    $('#two').on('click', function () {
+        score += picTwo;
+        WinLoose();
+        $('#score').text(score);
+    });
+    $('#three').on('click', function () {
+        score += picThree;
+        WinLoose();
+        $('#score').text(score);
+    });
+    $('#four').on('click', function () {
+        score += picFour;
+        WinLoose();
+        $('#score').text(score);
+    });
+
+    function WinLoose () {
+        if (score === compPick) {
+            wins += 1;
+            $('#wins').text(wins)
+            reset();
+        } else if (score > compPick) {
+            losses += 1;
+            $('#losses').text(losses);
+            reset();
+        }
+    }
 });
