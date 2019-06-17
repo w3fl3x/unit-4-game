@@ -13,6 +13,7 @@ $(document).ready(function() {
     var picThree = Math.floor(Math.random() * 12) +1;
     var picFour = Math.floor(Math.random() * 12) +1;
 
+    //Reset function
     function reset () {
         compPick = Math.floor(Math.random() * 102) + 19;
             $('#randomNumber').html(compPick);
@@ -24,6 +25,7 @@ $(document).ready(function() {
         picFour = Math.floor(Math.random() * 12) +1;
     };
 
+    //Click event for each minion image
     $('#one').on('click', function () {
         score += picOne;
         WinLoose();
@@ -45,15 +47,16 @@ $(document).ready(function() {
         $('#score').text(score);
     });
 
+    //Add to win/loss depending on outcome
     function WinLoose () {
         if (score === compPick) {
-            wins += 1;
+            wins++;
             $('#wins').text(wins)
             reset();
         } else if (score > compPick) {
-            losses += 1;
+            losses++;
             $('#losses').text(losses);
             reset();
-        }
-    }
+        };
+    };
 });
