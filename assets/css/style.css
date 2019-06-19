@@ -26,6 +26,7 @@ p {
 
 .minionImage {
     width: 200px;
+    margin: 2px 0;
 }
 
 #randomNumber,
